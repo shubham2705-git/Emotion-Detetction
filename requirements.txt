@@ -1,0 +1,8 @@
+tensorflow
+keras
+panda
+numpy
+jupyter
+notebook
+tqdm
+opencv-contrib-python
