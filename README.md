@@ -1,21 +1,48 @@
-# Emotion Detection using Python, OpenCV, and Keras
+# Emotional Detection AI
 
-This project uses **OpenCV** and **Keras** to perform **real-time emotion detection** from webcam input. It utilizes a pre-trained deep learning model to classify facial expressions into different emotions like **Angry**, **Happy**, **Sad**, **Surprise**, etc.
+This repository contains an emotional detection AI system that analyzes facial expressions to identify emotions.
 
----
+## Getting Started
 
-## 🚀 **Setup and Running the Project**
+### Prerequisites
+- Python 3.8+
+- Required packages (install via pip install -r requirements.txt)
 
-### 1. **Clone the Repository**
-Clone this repository to your local machine:
-```bash
-git clone https://github.com/yourusername/emotion-detection.git
+### Dataset
+The model is trained on the FER2013 dataset from Kaggle. To download the dataset:
 
-### 2. **Install Dependencies**
+1. Create a Kaggle account if you don't have one
+2. Download the dataset from: [https://www.kaggle.com/datasets/msambare/fer2013](https://www.kaggle.com/datasets/msambare/fer2013)
+3. Place the dataset in the data/ directory
 
-Ensure you have **Python** and **pip** installed. You can download Python from the [official Python website](https://www.python.org/downloads/).
+### Training
+To train the model yourself:
 
-Next, install the necessary libraries by running the following command:
+1. Open the training notebook (train_emotion_model.ipynb)
+2. Follow the instructions in the notebook to train the model
+3. The trained model will be saved as an .h5 file that can be used in the main application
 
-```bash
-pip install -r requirements.txt
+### Model Files
+The pre-trained model is stored in a .h5 file format. To use it:
+
+1. Download or train the model (see Training section)
+2. When using the model in your Python scripts, load it with:
+   python
+   from tensorflow.keras.models import load_model
+   
+   # Load the pre-trained model
+   model = load_model('path/to/emotion_model.h5')
+
+### Running the Application
+Execute the main Python script to run the application:
+
+bash
+python main.py
+
+
+## Project Structure
+- data/ - Directory for the dataset
+- models/ - Directory for saved model files (.h5)
+- train_emotion_model.ipynb - Jupyter notebook for model training
+- main.py - Main application script
+- requirements.txt - List of dependencies
